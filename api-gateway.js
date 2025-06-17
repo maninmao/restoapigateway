@@ -51,6 +51,11 @@ app.use('/auth', (req, res) => {
     proxy.web(req, res, { target: 'http://44.222.254.38:5051' });
 })
 
+app.use('/reg', (req, res) => {
+    proxy.web(req, res, { target: 'http://44.222.254.38:5052' });
+})  
+
+
 app.listen(4000, () => {
     console.log("API Gateway Service is running on PORT NO : 4000")
 })
